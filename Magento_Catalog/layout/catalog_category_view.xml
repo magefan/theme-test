@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+
+            <block class="Magento\Cms\Block\Block" name="super.puper.sale" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">our_new_block</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Template" name="hello.world" template="Magento_Catalog::category/super-puper-sale.phtml" before="-" />
+
+        </referenceContainer>
+        <move element="category.description" destination="main"  after="product_list_toolbar"  />
+    </body>
+</page>
